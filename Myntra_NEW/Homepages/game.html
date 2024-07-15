@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Shopping Online - Shop for Mens Clothing & Accessories in India | Myntra</title>
+    <link rel="shortcut icon" type="image/png" href="../Common Files/image/favicon.png">
+    <link rel="stylesheet" href="../Common Files/style.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header>
+        <div id="logo">
+            <img src="../Common Files/image/myntra-removebg-preview.png" alt="brandLogo" id="landingPage">
+        </div>
+        <ul id="nav_bar">
+            <li><a href="../Homepages/menHomePage.html">men</a></li>
+            <li><a href="../Homepages/womenHomePage.html">women</a></li>
+            <li><a href="../Homepages/homeLiving.html">home & living</a></li>
+            <li id="studio"><a href="../Homepages/influencer.html">Buzz</a><span>new</span></li>
+            <li id="studio"><a href="../Homepages/blogs.html">Blogs</a><span>new</span></li>
+            <li id="studio"><a href="../Homepages/game.html">Games</a><span>new</span></li>
+        </ul>
+        <div id="search">
+            <input type="text" id="search_bar" placeholder="Search for products, brands and more">
+            <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        </div>
+        <div id="right_icon">
+            <div id="reggDropdown">
+                <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+                <div id="drop">
+                    <a href="../Profile/profile.html" class="dropList">login</a>
+                    <a href="../Profile/signup.html" class="dropList">sign up</a>
+                </div>
+               
+                <i class="fa-regular fa-user"></i>
+                <span>profile</span>
+            </div>
+            <div>
+                <i class="fa-brands fa-affiliatetheme"></i>
+                <span>Affiliate</span>
+            </div>
+            <div>
+                <i class="fa-regular fa-heart"></i>
+                <span>wishlist</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>bag</span>
+            </div>
+            
+        </div>
+
+        <!-- TOGGLE MENU -->
+        <div id="toggle">
+            <i class='bx bx-menu dropbtn' onclick="myFunction()"></i>
+            <div id="myDropdown" class="dropdown-content">
+               
+                <div class="bottom">
+                    <i class="fa-regular fa-user fa_user" id="profile"></i>
+                    <i class="fa-regular fa-heart fa_wishlist"></i>
+                    <i class="fa-solid fa-bag-shopping fa_cart"></i>
+                    <i class="fa-brands fa-affiliatetheme fa_affil"></i>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="lol">
+
+   
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
+    <div class="Quiz Time">
+        <div class="ro">
+            <h1>Fashion Wheel</h1>
+
+        </div>
+        </div>
+    <div class="contair">
+        <div class="spinBtnss">Spin</div>
+        <div class="wheela">
+            <div class="numbera" style="--i:1;--clr:#FFBFC5;"><span>StreetWear</span></div>
+            <div class="numbera" style="--i:2;--clr:#FEB737;"><span>Ornaments</span></div>
+            <div class="numbera" style="--i:3;--clr:#69AFAD;"><span>90s Retro</span></div>
+            <div class="numbera" style="--i:4;--clr:#5271FF;"><span>Trendy</span></div>
+            <div class="numbera" style="--i:5;--clr:#DD9D7C;"><span>FootWears</span></div>
+            <div class="numbera" style="--i:6;--clr:#187B25;"><span>Timeless Styles</span></div>
+            <div class="numbera" style="--i:7;--clr:#d63e92;"><span>Ethnic Treasures</span></div>
+            <div class="numbera" style="--i:8;--clr:#C4391D;"><span>Exotic</span></div>
+        </div>
+    </div>
+    <div class="popupss" style="display: none;">
+        <p id="popupText">Congratulations! You landed on <span id="popupResult"></span>!</p>
+        <a href="#" id="popupLink">Click here for something <span id="popupLinkText"></span> and get 10% off</a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="Quiz Time">
+        <div class="ro">
+            <h1>Quiz Time</h1>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="plo">
+            <img src="quizzy.png" width="1000" height="2000">
+        </div>
+        
+          
+    </div>
+    <br>
+    <br>
+</div>
+
+    <script>
+       let wheel = document.querySelector('.wheela');
+let spinBtn = document.querySelector('.spinBtnss');
+let popup = document.querySelector('.popupss');
+let popupText = document.getElementById('popupText');
+let popupResult = document.getElementById('popupResult');
+let popupLink = document.getElementById('popupLink');
+let popupLinkText = document.getElementById('popupLinkText');
+let value = 0; // Initialize the starting value
+
+spinBtn.onclick = function() {
+    value += Math.ceil(Math.random() * 3600); // Randomize spin
+    wheel.style.transform = "rotate(" + value + "deg)";
+    setTimeout(checkResult, 6000); // Adjust timeout to match animation duration
+}
+
+function checkResult() {
+    // Calculate the actual angle of the wheel
+    let rotation = value % 360;
+    let option;
+    let link;
+
+    if (rotation >= 0 && rotation < 45 || rotation >= 315 && rotation < 360) {
+        option = "StreetWear";
+        link = "https://example.com/streetwear-link";
+    } else if (rotation >= 45 && rotation < 90) {
+        option = "Ornaments";
+        link = "https://example.com/elegant-link";
+    } else if (rotation >= 90 && rotation < 135) {
+        option = "90s Retro";
+        link = "https://example.com/90s-link";
+    } else if (rotation >= 135 && rotation < 180) {
+        option = "Trendy";
+        link = "https://example.com/trendy-link";
+    } else if (rotation >= 180 && rotation < 225) {
+        option = "Footwears";
+        link = "https://example.com/retro-link";
+    } else if (rotation >= 225 && rotation < 270) {
+        option = "Timeless Styles";
+        link = "https://example.com/military-link";
+    } else if (rotation >= 270 && rotation < 315) {
+        option = "Ethnic Treasures";
+        link = "https://example.com/cowgirl-link";
+    } else if (rotation >= 315 && rotation < 360) {
+        option = "Exotic";
+        link = "https://example.com/exotic-link";
+    }
+
+    // Display the popup with the correct text and link
+    popupResult.textContent = option;
+    popupLink.href = link;
+    popupLinkText.textContent = option.toLowerCase();
+    popup.style.display = 'block';
+}
+
+    </script>
+     <script>document.getElementById('landingPage').addEventListener('click', function(){
+        window.location.href = '../Landingpage/index.html'
+})</script>
+</body>
+</html>

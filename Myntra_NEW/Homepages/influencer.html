@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Shopping Online - Shop for Mens Clothing & Accessories in India | Myntra</title>
+    <link rel="shortcut icon" type="image/png" href="../Common Files/image/favicon.png">
+    <link rel="stylesheet" href="../Common Files/style.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header>
+        <div id="logo">
+            <img src="../Common Files/image/myntra-removebg-preview.png" alt="brandLogo" id="landingPage">
+        </div>
+        <ul id="nav_bar">
+            <li><a href="../Homepages/menHomePage.html">men</a></li>
+            <li><a href="../Homepages/womenHomePage.html">women</a></li>
+            <li><a href="../Homepages/homeLiving.html">home & living</a></li>
+            <li id="studio"><a href="../Homepages/influencer.html">Buzz</a><span>new</span></li>
+            <li id="studio"><a href="../Homepages/blogs.html">Blogs</a><span>new</span></li>
+            <li id="studio"><a href="../Homepages/game.html">Games</a><span>new</span></li>
+        </ul>
+        <div id="search">
+            <input type="text" id="search_bar" placeholder="Search for products, brands and more">
+            <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        </div>
+        <div id="right_icon">
+            <div id="reggDropdown">
+                <!-- DROPDOWN MENU TO BE CREATED FOR LOGIN AND SIGNUP -->
+                <div id="drop">
+                    <a href="../Profile/profile.html" class="dropList">login</a>
+                    <a href="../Profile/signup.html" class="dropList">sign up</a>
+                </div>
+                <i class="fa-regular fa-user"></i>
+                <span>profile</span>
+            </div>
+            <div>
+                <i class="fa-brands fa-affiliatetheme"></i>
+                <span>Affiliate</span>
+            </div>
+            <div>
+                <i class="fa-regular fa-heart"></i>
+                <span>wishlist</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>bag</span>
+            </div>
+        </div>
+
+        <!-- TOGGLE MENU -->
+        <div id="toggle">
+            <i class='bx bx-menu dropbtn' onclick="myFunction()"></i>
+            <div id="myDropdown" class="dropdown-content">
+               
+                <div class="bottom">
+                    <i class="fa-regular fa-user fa_user" id="profile"></i>
+                    <i class="fa-regular fa-heart fa_wishlist"></i>
+                    <i class="fa-solid fa-bag-shopping fa_cart"></i>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <section id="main-content">
+        <div class="container">
+            <div class="ro">
+            <h1>Trendz Setter!</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+
+            <!-- Influencer Section -->
+            <div class="influencer-section">
+                <!-- Influencer 1 -->
+                <div class="influencer">
+                    <img src="ne4.jpeg" alt="Influencer Outfit">
+                    <div class="info">
+                        <h2>Shalini Arora</h2> <!-- Replace with actual influencer name -->
+                        <p>Followers:100k</p> <!-- Replace with actual follower count -->
+                    </div>
+                    <div class="interactions">
+                        <button class="like-btn" onclick="like(this)">
+                            <i class="fa-solid fa-heart"></i> Like
+                        </button>
+                        <button class="buy-btn pink-button">Buy Now</button>
+                        <button class="comment-btn" onclick="toggleComments(this)">
+                            <i class="fa-regular fa-comment"></i> Comment
+                        </button>
+                    </div>
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <ul class="comments-list">
+                            <!-- Comments will be dynamically added here -->
+                        </ul>
+                        <form class="comment-form" onsubmit="addComment(event)">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button type="submit">Post</button>
+                        </form>
+                    </div>
+                    <!-- Comments section and form -->
+                </div>
+            
+                <!-- Influencer 2 -->
+                <div class="influencer">
+                    <img src="ne2.jpeg" alt="Influencer Outfit 2">
+                    <div class="info">
+                        <h2>Riddhi Singh</h2> <!-- Replace with actual influencer name -->
+                        <p>Followers: 150k</p> <!-- Replace with actual follower count -->
+                    </div>
+                    <div class="interactions">
+                        <button class="like-btn" onclick="like(this)">
+                            <i class="fa-solid fa-heart"></i> Like
+                        </button>
+                        <button class="buy-btn pink-button">Buy Now</button>
+                        <button class="comment-btn" onclick="toggleComments(this)">
+                            <i class="fa-regular fa-comment"></i> Comment
+                        </button>
+                    </div>
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <ul class="comments-list">
+                            <!-- Comments will be dynamically added here -->
+                        </ul>
+                        <form class="comment-form" onsubmit="addComment(event)">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button type="submit">Post</button>
+                        </form>
+                    </div>
+                    </div>
+            
+                <!-- Influencer 3 -->
+                <div class="influencer">
+                    <img src="ne1.jpeg" width ="200px" height="150px" alt="Influencer Outfit 3">
+                    <div class="info">
+                        <h2>Harsh Raj</h2> <!-- Replace with actual influencer name -->
+                        <p>Followers: 150k</p> <!-- Replace with actual follower count -->
+                    </div>
+                    <div class="interactions">
+                        <button class="like-btn" onclick="like(this)">
+                            <i class="fa-solid fa-heart"></i> Like
+                        </button>
+                        <button class="buy-btn pink-button">Buy Now</button>
+                        <button class="comment-btn" onclick="toggleComments(this)">
+                            <i class="fa-regular fa-comment"></i> Comment
+                        </button>
+                    </div>
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <ul class="comments-list">
+                            <!-- Comments will be dynamically added here -->
+                        </ul>
+                        <form class="comment-form" onsubmit="addComment(event)">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button type="submit">Post</button>
+                        </form>
+                    </div>
+                    <!-- Comments section and form -->
+                </div>
+                <!--next line-->
+                <br>
+                <br>
+                <div class="influencer">
+                    <img src="ne4.jpeg" alt="Influencer Outfit">
+                    <div class="info">
+                        <h2>Shalini Arora</h2> <!-- Replace with actual influencer name -->
+                        <p>Followers:100k</p> <!-- Replace with actual follower count -->
+                    </div>
+                    <div class="interactions">
+                        <button class="like-btn" onclick="like(this)">
+                            <i class="fa-solid fa-heart"></i> Like
+                        </button>
+                        <button class="buy-btn pink-button">Buy Now</button>
+                        <button class="comment-btn" onclick="toggleComments(this)">
+                            <i class="fa-regular fa-comment"></i> Comment
+                        </button>
+                    </div>
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <ul class="comments-list">
+                            <!-- Comments will be dynamically added here -->
+                        </ul>
+                        <form class="comment-form" onsubmit="addComment(event)">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button type="submit">Post</button>
+                        </form>
+                    </div>
+                    <!-- Comments section and form -->
+                </div>
+            
+                <!-- Influencer 2 -->
+                <div class="influencer">
+                    <img src="ne2.jpeg" alt="Influencer Outfit 2">
+                    <div class="info">
+                        <h2>Riddhi Singh</h2> <!-- Replace with actual influencer name -->
+                        <p>Followers: 150k</p> <!-- Replace with actual follower count -->
+                    </div>
+                    <div class="interactions">
+                        <button class="like-btn" onclick="like(this)">
+                            <i class="fa-solid fa-heart"></i> Like
+                        </button>
+                        <button class="buy-btn pink-button">Buy Now</button>
+                        <button class="comment-btn" onclick="toggleComments(this)">
+                            <i class="fa-regular fa-comment"></i> Comment
+                        </button>
+                    </div>
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <ul class="comments-list">
+                            <!-- Comments will be dynamically added here -->
+                        </ul>
+                        <form class="comment-form" onsubmit="addComment(event)">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button type="submit">Post</button>
+                        </form>
+                    </div>
+                    </div>
+            
+                <!-- Influencer 3 -->
+                <div class="influencer">
+                    <img src="ne1.jpeg" width ="200px" height="150px" alt="Influencer Outfit 3">
+                    <div class="info">
+                        <h2>Harsh Raj</h2> <!-- Replace with actual influencer name -->
+                        <p>Followers: 150k</p> <!-- Replace with actual follower count -->
+                    </div>
+                    <div class="interactions">
+                        <button class="like-btn" onclick="like(this)">
+                            <i class="fa-solid fa-heart"></i> Like
+                        </button>
+                        <button class="buy-btn pink-button">Buy Now</button>
+                        <button class="comment-btn" onclick="toggleComments(this)">
+                            <i class="fa-regular fa-comment"></i> Comment
+                        </button>
+                    </div>
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <ul class="comments-list">
+                            <!-- Comments will be dynamically added here -->
+                        </ul>
+                        <form class="comment-form" onsubmit="addComment(event)">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button type="submit">Post</button>
+                        </form>
+                    </div>
+                    <!-- Comments section and form -->
+                </div>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+            <div class="Live Events">
+                <div class="ro">
+                    <h1>Live Events</h1>
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="plo">
+                    <img src="fbb.jpg" width="1200" height="2000">
+                </div>
+                
+                  
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        
+    </footer>
+
+    <script src="../Common Files/script.js"></script>
+    <script src="../Common Files/headerMenu.js"></script>
+    <script src="../Common Files/carousel.js"></script>
+    <script src="../Common Files/hyperlinks.js"></script>
+
+    <script>
+        // JavaScript for liking and commenting on influencer outfits
+        const influencers = document.querySelectorAll('.influencer');
+
+        function like(button) {
+            button.classList.toggle('liked');
+        }
+
+        function toggleComments(button) {
+            const commentsSection = button.parentElement.nextElementSibling;
+            commentsSection.classList.toggle('show-comments');
+        }
+
+        function addComment(event) {
+            event.preventDefault();
+            const commentInput = event.target.querySelector('.comment-input');
+            const commentText = commentInput.value.trim();
+            if (commentText !== '') {
+                const commentsList = event.target.previousElementSibling.querySelector('.comments-list');
+                const newComment = document.createElement('li');
+                newComment.textContent = commentText;
+                commentsList.appendChild(newComment);
+                commentInput.value = '';
+            }
+        }
+        document.getElementById('landingPage').addEventListener('click', function(){
+        window.location.href = '../Landingpage/index.html'
+})
+    </script>
+
+</body>
+
+</html>
